@@ -1,0 +1,2193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>calc</class>
+ <widget class="QMainWindow" name="calc">
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>593</width>
+    <height>634</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="windowTitle">
+   <string>calc</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(23, 28, 37)</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="minimumSize">
+    <size>
+     <width>0</width>
+     <height>0</height>
+    </size>
+   </property>
+   <widget class="QTabWidget" name="tabWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>581</width>
+      <height>601</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>581</width>
+      <height>551</height>
+     </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QTabBar::tab {
+color: white;
+margin-top: 10px;
+font-size: 20px;
+border: none;
+padding-left: 25px;
+padding-right: 25px;
+}
+
+QTabBar::tab:hover {
+color: rgb(122, 232, 160);
+background-color:  rgb(23, 28, 37);
+}
+
+QTabBar::tab:selected {
+color: rgb(112, 222, 150);
+background-color:  rgb(23, 28, 37);
+}
+QTabWidget::pane { 
+   border: none;
+}</string>
+    </property>
+    <property name="currentIndex">
+     <number>2</number>
+    </property>
+    <widget class="QWidget" name="tab">
+     <property name="styleSheet">
+      <string notr="true">color: res;</string>
+     </property>
+     <attribute name="title">
+      <string>Калькулятор</string>
+     </attribute>
+     <widget class="QFrame" name="frame">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>20</y>
+        <width>551</width>
+        <height>471</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(46, 56, 72);
+border-radius: 12px;</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <widget class="QLineEdit" name="lineEdit">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>40</y>
+         <width>511</width>
+         <height>71</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background: #516071;
+border-radius: 6px;
+color: #FFFFFF;
+font-size: 25px;
+height:  70px;
+margin-top: 10px;</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="QWidget" name="gridLayoutWidget">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>120</y>
+         <width>511</width>
+         <height>332</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>0</height>
+        </size>
+       </property>
+       <layout class="QGridLayout" name="gridLayout">
+        <item row="1" column="4">
+         <widget class="QPushButton" name="pushButton_3">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton {
+background:  rgb(101, 114, 130);
+border-radius: 6px;
+color: #FFFFFF;
+font-size: 25px;
+height:  50px;
+}
+
+QPushButton:hover {
+background:   #516071;;
+}
+QPushButton:pressed {
+background:  rgb(81, 94, 110);
+}
+</string>
+          </property>
+          <property name="text">
+           <string>3</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="2">
+         <widget class="QPushButton" name="pushButton_open_bracket">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton {
+background: #516071;
+border-radius: 6px;
+color: #FFFFFF;
+font-size: 25px;
+height:  50px;
+}
+
+QPushButton:hover {
+background:  rgb(101, 114, 130);;
+}
+QPushButton:pressed {
+background:  rgb(91, 104, 120);;
+}
+</string>
+          </property>
+          <property name="text">
+           <string>(</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="0">
+         <widget class="QPushButton" name="pushButton_acos">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton {
+background: #516071;
+border-radius: 6px;
+color: #FFFFFF;
+font-size: 25px;
+height:  50px;
+}
+
+QPushButton:hover {
+background:  rgb(101, 114, 130);;
+}
+QPushButton:pressed {
+background:  rgb(91, 104, 120);;
+}
+</string>
+          </property>
+          <property name="text">
+           <string>acos</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="5">
+         <widget class="QPushButton" name="pushButton_point">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton {
+background: #516071;
+border-radius: 6px;
+color: #FFFFFF;
+font-size: 25px;
+height:  50px;
+}
+
+QPushButton:hover {
+background:  rgb(101, 114, 130);;
+}
+QPushButton:pressed {
+background:  rgb(91, 104, 120);;
+}
+</string>
+          </property>
+          <property name="text">
+           <string>.</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="2">
+         <widget class="QPushButton" name="pushButton_4">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton {
+background:  rgb(101, 114, 130);
+border-radius: 6px;
+color: #FFFFFF;
+font-size: 25px;
+height:  50px;
+}
+
+QPushButton:hover {
+background:   #516071;;
+}
+QPushButton:pressed {
+background:  rgb(81, 94, 110);
+}
+</string>
+          </property>
+          <property name="text">
+           <string>4</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="3">
+         <widget class="QPushButton" name="pushButton_2">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton {
+background:  rgb(101, 114, 130);
+border-radius: 6px;
+color: #FFFFFF;
+font-size: 25px;
+height:  50px;
+}
+
+QPushButton:hover {
+background:   #516071;;
+}
+QPushButton:pressed {
+background:  rgb(81, 94, 110);
+}
+</string>
+          </property>
+          <property name="text">
+           <string>2</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="4">
+         <widget class="QPushButton" name="pushButton_div">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton {
+background: #516071;
+border-radius: 6px;
+color: #FFFFFF;
+font-size: 25px;
+height:  50px;
+}
+
+QPushButton:hover {
+background:  rgb(101, 114, 130);;
+}
+QPushButton:pressed {
+background:  rgb(91, 104, 120);;
+}
+</string>
+          </property>
+          <property name="text">
+           <string>%</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="2">
+         <widget class="QPushButton" name="pushButton_7">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton {
+background:  rgb(101, 114, 130);
+border-radius: 6px;
+color: #FFFFFF;
+font-size: 25px;
+height:  50px;
+}
+
+QPushButton:hover {
+background:   #516071;;
+}
+QPushButton:pressed {
+background:  rgb(81, 94, 110);
+}
+</string>
+          </property>
+          <property name="text">
+           <string>7</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="2">
+         <widget class="QPushButton" name="pushButton_0">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton {
+background:  rgb(101, 114, 130);
+border-radius: 6px;
+color: #FFFFFF;
+font-size: 25px;
+height:  50px;
+}
+
+QPushButton:hover {
+background:   #516071;;
+}
+QPushButton:pressed {
+background:  rgb(81, 94, 110);
+}
+</string>
+          </property>
+          <property name="text">
+           <string>0</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="4">
+         <widget class="QPushButton" name="pushButton_6">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton {
+background:  rgb(101, 114, 130);
+border-radius: 6px;
+color: #FFFFFF;
+font-size: 25px;
+height:  50px;
+}
+
+QPushButton:hover {
+background:   #516071;;
+}
+QPushButton:pressed {
+background:  rgb(81, 94, 110);
+}
+</string>
+          </property>
+          <property name="text">
+           <string>6</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="1">
+         <widget class="QPushButton" name="pushButton_atan">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton {
+background: #516071;
+border-radius: 6px;
+color: #FFFFFF;
+font-size: 25px;
+height:  50px;
+}
+
+QPushButton:hover {
+background:  rgb(101, 114, 130);;
+}
+QPushButton:pressed {
+background:  rgb(91, 104, 120);;
+}
+</string>
+          </property>
+          <property name="text">
+           <string>atan</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="1">
+         <widget class="QPushButton" name="pushButton_log">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton {
+background: #516071;
+border-radius: 6px;
+color: #FFFFFF;
+font-size: 25px;
+height:  50px;
+}
+
+QPushButton:hover {
+background:  rgb(101, 114, 130);;
+}
+QPushButton:pressed {
+background:  rgb(91, 104, 120);;
+}
+</string>
+          </property>
+          <property name="text">
+           <string>log</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1">
+         <widget class="QPushButton" name="pushButton_ln">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton {
+background: #516071;
+border-radius: 6px;
+color: #FFFFFF;
+font-size: 25px;
+height:  50px;
+}
+
+QPushButton:hover {
+background:  rgb(101, 114, 130);;
+}
+QPushButton:pressed {
+background:  rgb(91, 104, 120);;
+}
+</string>
+          </property>
+          <property name="text">
+           <string>ln</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="3">
+         <widget class="QPushButton" name="pushButton_8">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton {
+background:  rgb(101, 114, 130);
+border-radius: 6px;
+color: #FFFFFF;
+font-size: 25px;
+height:  50px;
+}
+
+QPushButton:hover {
+background:   #516071;;
+}
+QPushButton:pressed {
+background:  rgb(81, 94, 110);
+}
+</string>
+          </property>
+          <property name="text">
+           <string>8</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="5">
+         <widget class="QPushButton" name="pushButton_clear">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton {
+background: #516071;
+border-radius: 6px;
+color: #FFFFFF;
+font-size: 25px;
+height:  50px;
+}
+
+QPushButton:hover {
+background:  rgb(101, 114, 130);;
+}
+QPushButton:pressed {
+background:  rgb(91, 104, 120);;
+}
+</string>
+          </property>
+          <property name="text">
+           <string>AC</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="3">
+         <widget class="QPushButton" name="pushButton_5">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton {
+background:  rgb(101, 114, 130);
+border-radius: 6px;
+color: #FFFFFF;
+font-size: 25px;
+height:  50px;
+}
+
+QPushButton:hover {
+background:   #516071;;
+}
+QPushButton:pressed {
+background:  rgb(81, 94, 110);
+}
+</string>
+          </property>
+          <property name="text">
+           <string>5</string>
+          </property>
+          <property name="autoDefault">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QPushButton" name="pushButton_sqrt">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton {
+background: #516071;
+border-radius: 6px;
+color: #FFFFFF;
+font-size: 25px;
+height:  50px;
+}
+
+QPushButton:hover {
+background:  rgb(101, 114, 130);;
+}
+QPushButton:pressed {
+background:  rgb(91, 104, 120);;
+}
+</string>
+          </property>
+          <property name="text">
+           <string>sqrt</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="4">
+         <widget class="QPushButton" name="pushButton_9">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton {
+background:  rgb(101, 114, 130);
+border-radius: 6px;
+color: #FFFFFF;
+font-size: 25px;
+height:  50px;
+}
+
+QPushButton:hover {
+background:   #516071;;
+}
+QPushButton:pressed {
+background:  rgb(81, 94, 110);
+}
+</string>
+          </property>
+          <property name="text">
+           <string>9</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0">
+         <widget class="QPushButton" name="pushButton_tan">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton {
+background: #516071;
+border-radius: 6px;
+color: #FFFFFF;
+font-size: 25px;
+height:  50px;
+}
+
+QPushButton:hover {
+background:  rgb(101, 114, 130);;
+}
+QPushButton:pressed {
+background:  rgb(91, 104, 120);;
+}
+</string>
+          </property>
+          <property name="text">
+           <string>tan</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="0">
+         <widget class="QPushButton" name="pushButton_cos">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton {
+background: #516071;
+border-radius: 6px;
+color: #FFFFFF;
+font-size: 25px;
+height:  50px;
+}
+
+QPushButton:hover {
+background:  rgb(101, 114, 130);;
+}
+QPushButton:pressed {
+background:  rgb(91, 104, 120);;
+}
+</string>
+          </property>
+          <property name="text">
+           <string>cos</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="3">
+         <widget class="QPushButton" name="pushButton_x">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton {
+background: #516071;
+border-radius: 6px;
+color: #FFFFFF;
+font-size: 25px;
+height:  50px;
+}
+
+QPushButton:hover {
+background:  rgb(101, 114, 130);;
+}
+QPushButton:pressed {
+background:  rgb(91, 104, 120);;
+}
+</string>
+          </property>
+          <property name="text">
+           <string>x</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="2">
+         <widget class="QPushButton" name="pushButton_1">
+          <property name="enabled">
+           <bool>true</bool>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="mouseTracking">
+           <bool>true</bool>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton {
+background:  rgb(101, 114, 130);
+border-radius: 6px;
+color: #FFFFFF;
+font-size: 25px;
+height:  50px;
+}
+
+QPushButton:hover {
+background:   #516071;;
+}
+QPushButton:pressed {
+background:  rgb(81, 94, 110);
+}
+</string>
+          </property>
+          <property name="text">
+           <string>1</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QPushButton" name="pushButton_pow">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton {
+background: #516071;
+border-radius: 6px;
+color: #FFFFFF;
+font-size: 25px;
+height:  50px;
+}
+
+QPushButton:hover {
+background:  rgb(101, 114, 130);;
+}
+QPushButton:pressed {
+background:  rgb(91, 104, 120);;
+}
+</string>
+          </property>
+          <property name="text">
+           <string>^</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="5">
+         <widget class="QPushButton" name="pushButton_minus">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton {
+background: #516071;
+border-radius: 6px;
+color: #FFFFFF;
+font-size: 25px;
+height:  50px;
+}
+
+QPushButton:hover {
+background:  rgb(101, 114, 130);;
+}
+QPushButton:pressed {
+background:  rgb(91, 104, 120);;
+}
+</string>
+          </property>
+          <property name="text">
+           <string>-</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QPushButton" name="pushButton_sin">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton {
+background: #516071;
+border-radius: 6px;
+color: #FFFFFF;
+font-size: 25px;
+height:  50px;
+}
+
+QPushButton:hover {
+background:  rgb(101, 114, 130);;
+}
+QPushButton:pressed {
+background:  rgb(91, 104, 120);;
+}
+</string>
+          </property>
+          <property name="text">
+           <string>sin</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="5">
+         <widget class="QPushButton" name="pushButton_plus">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton {
+background: #516071;
+border-radius: 6px;
+color: #FFFFFF;
+font-size: 25px;
+height:  50px;
+}
+
+QPushButton:hover {
+background:  rgb(101, 114, 130);;
+}
+QPushButton:pressed {
+background:  rgb(91, 104, 120);;
+}
+</string>
+          </property>
+          <property name="text">
+           <string>+</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="5">
+         <widget class="QPushButton" name="pushButton_mul">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton {
+background: #516071;
+border-radius: 6px;
+color: #FFFFFF;
+font-size: 25px;
+height:  50px;
+}
+
+QPushButton:hover {
+background:  rgb(101, 114, 130);;
+}
+QPushButton:pressed {
+background:  rgb(91, 104, 120);;
+}
+</string>
+          </property>
+          <property name="text">
+           <string>×</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="0">
+         <widget class="QPushButton" name="pushButton_asin">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton {
+background: #516071;
+border-radius: 6px;
+color: #FFFFFF;
+font-size: 25px;
+height:  50px;
+}
+
+QPushButton:hover {
+background:  rgb(101, 114, 130);;
+}
+QPushButton:pressed {
+background:  rgb(91, 104, 120);;
+}
+</string>
+          </property>
+          <property name="text">
+           <string>asin</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="4">
+         <widget class="QPushButton" name="pushButton_equal">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton {
+background: #516071;
+border-radius: 6px;
+color: #FFFFFF;
+font-size: 25px;
+height:  50px;
+background-color: rgb(151, 84, 226);
+}
+
+QPushButton:hover {
+background-color: rgb(201, 134, 255);
+}
+QPushButton:pressed {
+background-color:  rgb(122, 232, 160);
+}
+</string>
+          </property>
+          <property name="text">
+           <string>=</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="3">
+         <widget class="QPushButton" name="pushButton_close_bracket">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton {
+background: #516071;
+border-radius: 6px;
+color: #FFFFFF;
+font-size: 25px;
+height:  50px;
+}
+
+QPushButton:hover {
+background:  rgb(101, 114, 130);;
+}
+QPushButton:pressed {
+background:  rgb(91, 104, 120);;
+}
+</string>
+          </property>
+          <property name="text">
+           <string>)</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QLineEdit" name="lineEdit_2">
+       <property name="geometry">
+        <rect>
+         <x>350</x>
+         <y>10</y>
+         <width>181</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">
+color: rgb(200, 200, 230);
+font-size: 15px;</string>
+       </property>
+       <property name="text">
+        <string>0/255</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="lineEdit_3">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>10</y>
+         <width>181</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">
+color: rgb(232, 88, 86);
+font-size: 20px;</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+       </property>
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QFrame" name="frame_2">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>510</y>
+        <width>271</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(46, 56, 72);
+border-radius: 12px;</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <widget class="QLabel" name="label">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>11</y>
+         <width>101</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: #FFFFFF;
+font-size: 20px;</string>
+       </property>
+       <property name="text">
+        <string>Введите x:</string>
+       </property>
+      </widget>
+      <widget class="QDoubleSpinBox" name="doubleSpinBox">
+       <property name="geometry">
+        <rect>
+         <x>130</x>
+         <y>11</y>
+         <width>131</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QDoubleSpinBox {
+font-size: 20px;
+color: white;
+}
+
+QDoubleSpinBox:prefix {
+background-color: red;
+}</string>
+       </property>
+       <property name="buttonSymbols">
+        <enum>QAbstractSpinBox::NoButtons</enum>
+       </property>
+       <property name="prefix">
+        <string/>
+       </property>
+       <property name="suffix">
+        <string/>
+       </property>
+       <property name="minimum">
+        <double>-10000000.000000000000000</double>
+       </property>
+       <property name="maximum">
+        <double>10000000.000000000000000</double>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_4">
+     <attribute name="title">
+      <string>График</string>
+     </attribute>
+     <widget class="QFrame" name="frame_3">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>20</y>
+        <width>551</width>
+        <height>541</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(46, 56, 72);
+border-radius: 12px;</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <widget class="QCustomPlot" name="widget" native="true">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>30</y>
+         <width>511</width>
+         <height>461</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(46, 56, 72);
+color: green;</string>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_3">
+     <attribute name="title">
+      <string>Кредитный</string>
+     </attribute>
+     <widget class="QFrame" name="frame_4">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>20</y>
+        <width>551</width>
+        <height>541</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(46, 56, 72);
+/*background: #516071;*/
+border-radius: 12px;</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <widget class="QPushButton" name="pushButton_equal_2">
+       <property name="geometry">
+        <rect>
+         <x>300</x>
+         <y>280</y>
+         <width>231</width>
+         <height>50</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+background: #516071;
+border-radius: 6px;
+color: #FFFFFF;
+font-size: 20px;
+height:  50px;
+background-color: rgb(151, 84, 226);
+}
+
+QPushButton:hover {
+background-color: rgb(201, 134, 255);
+}
+QPushButton:pressed {
+background-color:  rgb(122, 232, 160);
+}
+</string>
+       </property>
+       <property name="text">
+        <string>Рассчитать</string>
+       </property>
+      </widget>
+      <widget class="QWidget" name="formLayoutWidget">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>360</y>
+         <width>481</width>
+         <height>127</height>
+        </rect>
+       </property>
+       <layout class="QFormLayout" name="formLayout">
+        <property name="labelAlignment">
+         <set>Qt::AlignBottom|Qt::AlignLeading|Qt::AlignLeft</set>
+        </property>
+        <property name="formAlignment">
+         <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+        </property>
+        <item row="1" column="0">
+         <widget class="QLabel" name="label_10">
+          <property name="styleSheet">
+           <string notr="true">color: #FFFFFF;
+font-size: 18px;</string>
+          </property>
+          <property name="text">
+           <string>Начисленные проценты</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0">
+         <widget class="QLabel" name="label_11">
+          <property name="styleSheet">
+           <string notr="true">color: #FFFFFF;
+font-size: 18px;</string>
+          </property>
+          <property name="text">
+           <string>Долг + проценты</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QLineEdit" name="lineEdit_4">
+          <property name="styleSheet">
+           <string notr="true">font-size: 20px;
+color: white;
+background:  rgb(101, 114, 130);
+padding: 5px;
+padding-right: 10px;
+margin-left: 60px;
+min-width: 70px;</string>
+          </property>
+          <property name="readOnly">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QLineEdit" name="lineEdit_5">
+          <property name="styleSheet">
+           <string notr="true">font-size: 20px;
+color: white;
+background:  rgb(101, 114, 130);
+padding: 5px;
+padding-right: 10px;
+margin-left: 60px;
+min-width: 70px;</string>
+          </property>
+          <property name="readOnly">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1">
+         <widget class="QLineEdit" name="lineEdit_6">
+          <property name="styleSheet">
+           <string notr="true">font-size: 20px;
+color: white;
+background:  rgb(101, 114, 130);
+padding: 5px;
+padding-right: 10px;
+margin-left: 60px;
+min-width: 70px;</string>
+          </property>
+          <property name="readOnly">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="0">
+         <widget class="QLabel" name="label_9">
+          <property name="styleSheet">
+           <string notr="true">color: #FFFFFF;
+font-size: 18px;</string>
+          </property>
+          <property name="text">
+           <string>Ежемесячный платеж</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QGroupBox" name="groupBox">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>20</y>
+         <width>511</width>
+         <height>241</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background:  rgb(61, 76, 93);
+border-radius: 12px;</string>
+       </property>
+       <property name="title">
+        <string/>
+       </property>
+       <widget class="QWidget" name="formLayoutWidget_2">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>20</y>
+          <width>465</width>
+          <height>221</height>
+         </rect>
+        </property>
+        <layout class="QFormLayout" name="formLayout_2">
+         <property name="labelAlignment">
+          <set>Qt::AlignBottom|Qt::AlignLeading|Qt::AlignLeft</set>
+         </property>
+         <property name="formAlignment">
+          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+         </property>
+         <property name="bottomMargin">
+          <number>0</number>
+         </property>
+         <item row="0" column="0">
+          <widget class="QLabel" name="label_5">
+           <property name="layoutDirection">
+            <enum>Qt::LeftToRight</enum>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color: #FFFFFF;
+font-size: 18px;</string>
+           </property>
+           <property name="text">
+            <string>Сумма кредита</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QDoubleSpinBox" name="doubleSpinBox_5">
+           <property name="styleSheet">
+            <string notr="true">QDoubleSpinBox {
+font-size: 20px;
+color: white;
+background:  rgb(101, 114, 130);
+padding: 5px;
+padding-right: 10px;
+margin-left: 20px;
+}</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignJustify|Qt::AlignVCenter</set>
+           </property>
+           <property name="buttonSymbols">
+            <enum>QAbstractSpinBox::NoButtons</enum>
+           </property>
+           <property name="prefix">
+            <string/>
+           </property>
+           <property name="suffix">
+            <string/>
+           </property>
+           <property name="minimum">
+            <double>0.000000000000000</double>
+           </property>
+           <property name="maximum">
+            <double>10000000.000000000000000</double>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QLabel" name="label_8">
+           <property name="styleSheet">
+            <string notr="true">color: #FFFFFF;
+font-size: 18px;</string>
+           </property>
+           <property name="text">
+            <string>Срок кредита</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QSpinBox" name="spinBox">
+           <property name="styleSheet">
+            <string notr="true">min-width: 70px;
+font-size: 20px;
+color: white;
+background:  rgb(101, 114, 130);
+padding: 5px;
+padding-right: 10px;
+margin-left: 20px;</string>
+           </property>
+           <property name="buttonSymbols">
+            <enum>QAbstractSpinBox::NoButtons</enum>
+           </property>
+           <property name="minimum">
+            <number>0</number>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="0">
+          <widget class="QLabel" name="label_7">
+           <property name="styleSheet">
+            <string notr="true">color: #FFFFFF;
+font-size: 18px;</string>
+           </property>
+           <property name="text">
+            <string>Процентная ставка</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="1">
+          <widget class="QDoubleSpinBox" name="doubleSpinBox_7">
+           <property name="styleSheet">
+            <string notr="true">QDoubleSpinBox {
+font-size: 20px;
+color: white;
+background:  rgb(101, 114, 130);
+padding: 5px;
+padding-right: 10px;
+margin-left: 20px;
+min-width: 70px;
+}</string>
+           </property>
+           <property name="buttonSymbols">
+            <enum>QAbstractSpinBox::NoButtons</enum>
+           </property>
+           <property name="prefix">
+            <string/>
+           </property>
+           <property name="suffix">
+            <string/>
+           </property>
+           <property name="minimum">
+            <double>0.000000000000000</double>
+           </property>
+           <property name="maximum">
+            <double>10000000.000000000000000</double>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="0">
+          <widget class="QLabel" name="label_12">
+           <property name="styleSheet">
+            <string notr="true">color: #FFFFFF;
+font-size: 18px;</string>
+           </property>
+           <property name="text">
+            <string>Тип ежемесячных платежей</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="1">
+          <widget class="QRadioButton" name="radioButton_3">
+           <property name="styleSheet">
+            <string notr="true">color: #FFFFFF;
+font-size: 18px;
+margin-left: 20px;
+padding-top: 5px;</string>
+           </property>
+           <property name="text">
+            <string>Аннуитетные</string>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="1">
+          <widget class="QRadioButton" name="radioButton">
+           <property name="styleSheet">
+            <string notr="true">color: #FFFFFF;
+font-size: 18px;
+margin-left: 20px;</string>
+           </property>
+           <property name="text">
+            <string>Дифференцированные</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="verticalLayoutWidget">
+        <property name="geometry">
+         <rect>
+          <x>470</x>
+          <y>20</y>
+          <width>31</width>
+          <height>141</height>
+         </rect>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout">
+         <item>
+          <widget class="QLabel" name="label_2">
+           <property name="styleSheet">
+            <string notr="true">color: #FFFFFF;
+font-size: 18px;</string>
+           </property>
+           <property name="text">
+            <string>₽</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_3">
+           <property name="styleSheet">
+            <string notr="true">color: #FFFFFF;
+font-size: 18px;</string>
+           </property>
+           <property name="text">
+            <string>лет</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_4">
+           <property name="styleSheet">
+            <string notr="true">color: #FFFFFF;
+font-size: 18px;</string>
+           </property>
+           <property name="text">
+            <string>%</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+      <widget class="QLineEdit" name="lineEdit_7">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>270</y>
+         <width>181</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">
+color: rgb(232, 88, 86);
+font-size: 20px;</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+       </property>
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QWidget" name="verticalLayoutWidget_2">
+       <property name="geometry">
+        <rect>
+         <x>500</x>
+         <y>360</y>
+         <width>31</width>
+         <height>131</height>
+        </rect>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <item>
+         <widget class="QLabel" name="label_6">
+          <property name="styleSheet">
+           <string notr="true">color: #FFFFFF;
+font-size: 18px;</string>
+          </property>
+          <property name="text">
+           <string>₽</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_13">
+          <property name="styleSheet">
+           <string notr="true">color: #FFFFFF;
+font-size: 18px;</string>
+          </property>
+          <property name="text">
+           <string>₽</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_14">
+          <property name="styleSheet">
+           <string notr="true">color: #FFFFFF;
+font-size: 18px;</string>
+          </property>
+          <property name="text">
+           <string>₽</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <zorder>formLayoutWidget</zorder>
+      <zorder>groupBox</zorder>
+      <zorder>pushButton_equal_2</zorder>
+      <zorder>lineEdit_7</zorder>
+      <zorder>verticalLayoutWidget_2</zorder>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_2">
+     <attribute name="title">
+      <string>Депозитный</string>
+     </attribute>
+     <widget class="QFrame" name="frame_5">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>20</y>
+        <width>551</width>
+        <height>521</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">/*background-color: rgb(46, 56, 72);*/
+background: #516071;
+border-radius: 12px;</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <widget class="QGroupBox" name="groupBox_2">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>20</y>
+         <width>511</width>
+         <height>411</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(46, 56, 72);
+border-radius: 12px;</string>
+       </property>
+       <property name="title">
+        <string/>
+       </property>
+       <widget class="QWidget" name="formLayoutWidget_3">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>20</y>
+          <width>465</width>
+          <height>381</height>
+         </rect>
+        </property>
+        <layout class="QFormLayout" name="formLayout_3">
+         <property name="labelAlignment">
+          <set>Qt::AlignBottom|Qt::AlignLeading|Qt::AlignLeft</set>
+         </property>
+         <property name="formAlignment">
+          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+         </property>
+         <property name="bottomMargin">
+          <number>0</number>
+         </property>
+         <item row="0" column="0">
+          <widget class="QLabel" name="label_15">
+           <property name="layoutDirection">
+            <enum>Qt::LeftToRight</enum>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color: #FFFFFF;
+font-size: 18px;</string>
+           </property>
+           <property name="text">
+            <string>Сумма вклада</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QDoubleSpinBox" name="doubleSpinBox_6">
+           <property name="styleSheet">
+            <string notr="true">QDoubleSpinBox {
+font-size: 20px;
+color: white;
+background:  rgb(101, 114, 130);
+padding: 5px;
+padding-right: 10px;
+margin-left: 20px;
+}</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignJustify|Qt::AlignVCenter</set>
+           </property>
+           <property name="buttonSymbols">
+            <enum>QAbstractSpinBox::NoButtons</enum>
+           </property>
+           <property name="prefix">
+            <string/>
+           </property>
+           <property name="suffix">
+            <string/>
+           </property>
+           <property name="minimum">
+            <double>0.000000000000000</double>
+           </property>
+           <property name="maximum">
+            <double>10000000.000000000000000</double>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QLabel" name="label_22">
+           <property name="styleSheet">
+            <string notr="true">color: #FFFFFF;
+font-size: 18px;</string>
+           </property>
+           <property name="text">
+            <string>Срок размещения</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QSpinBox" name="spinBox_2">
+           <property name="styleSheet">
+            <string notr="true">min-width: 70px;
+font-size: 20px;
+color: white;
+background:  rgb(101, 114, 130);
+padding: 5px;
+padding-right: 10px;
+margin-left: 20px;</string>
+           </property>
+           <property name="buttonSymbols">
+            <enum>QAbstractSpinBox::NoButtons</enum>
+           </property>
+           <property name="minimum">
+            <number>0</number>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="0">
+          <widget class="QLabel" name="label_23">
+           <property name="styleSheet">
+            <string notr="true">color: #FFFFFF;
+font-size: 18px;</string>
+           </property>
+           <property name="text">
+            <string>Начало срока</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="0">
+          <widget class="QLabel" name="label_17">
+           <property name="styleSheet">
+            <string notr="true">color: #FFFFFF;
+font-size: 18px;</string>
+           </property>
+           <property name="text">
+            <string>Процентная ставка</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="1">
+          <widget class="QDoubleSpinBox" name="doubleSpinBox_8">
+           <property name="styleSheet">
+            <string notr="true">QDoubleSpinBox {
+font-size: 20px;
+color: white;
+background:  rgb(101, 114, 130);
+padding: 5px;
+padding-right: 10px;
+margin-left: 20px;
+min-width: 70px;
+}</string>
+           </property>
+           <property name="buttonSymbols">
+            <enum>QAbstractSpinBox::NoButtons</enum>
+           </property>
+           <property name="prefix">
+            <string/>
+           </property>
+           <property name="suffix">
+            <string/>
+           </property>
+           <property name="minimum">
+            <double>0.000000000000000</double>
+           </property>
+           <property name="maximum">
+            <double>10000000.000000000000000</double>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="0">
+          <widget class="QLabel" name="label_18">
+           <property name="styleSheet">
+            <string notr="true">color: #FFFFFF;
+font-size: 18px;</string>
+           </property>
+           <property name="text">
+            <string>Налоговая ставка</string>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="1">
+          <widget class="QDoubleSpinBox" name="doubleSpinBox_9">
+           <property name="styleSheet">
+            <string notr="true">QDoubleSpinBox {
+font-size: 20px;
+color: white;
+background:  rgb(101, 114, 130);
+padding: 5px;
+padding-right: 10px;
+margin-left: 20px;
+min-width: 70px;
+}</string>
+           </property>
+           <property name="buttonSymbols">
+            <enum>QAbstractSpinBox::NoButtons</enum>
+           </property>
+           <property name="prefix">
+            <string/>
+           </property>
+           <property name="suffix">
+            <string/>
+           </property>
+           <property name="minimum">
+            <double>0.000000000000000</double>
+           </property>
+           <property name="maximum">
+            <double>10000000.000000000000000</double>
+           </property>
+          </widget>
+         </item>
+         <item row="5" column="0">
+          <widget class="QLabel" name="label_24">
+           <property name="styleSheet">
+            <string notr="true">color: #FFFFFF;
+font-size: 18px;</string>
+           </property>
+           <property name="text">
+            <string>Периодичность выплат</string>
+           </property>
+          </widget>
+         </item>
+         <item row="7" column="0">
+          <widget class="QLabel" name="label_26">
+           <property name="styleSheet">
+            <string notr="true">color: #FFFFFF;
+font-size: 18px;</string>
+           </property>
+           <property name="text">
+            <string>Пополнения</string>
+           </property>
+          </widget>
+         </item>
+         <item row="8" column="0">
+          <widget class="QLabel" name="label_27">
+           <property name="styleSheet">
+            <string notr="true">color: #FFFFFF;
+font-size: 18px;</string>
+           </property>
+           <property name="text">
+            <string>Частичные снятия</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="1">
+          <widget class="QDateEdit" name="dateEdit">
+           <property name="styleSheet">
+            <string notr="true">min-width: 70px;
+font-size: 20px;
+color: white;
+background:  rgb(101, 114, 130);
+padding: 5px;
+padding-right: 10px;
+margin-left: 20px;</string>
+           </property>
+           <property name="calendarPopup">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item row="5" column="1">
+          <widget class="QComboBox" name="comboBox">
+           <property name="styleSheet">
+            <string notr="true">font-size: 20px;
+color: white;
+background:  rgb(101, 114, 130);
+padding: 5px;
+padding-right: 10px;
+margin-left: 20px;
+min-width: 70px;</string>
+           </property>
+          </widget>
+         </item>
+         <item row="6" column="1">
+          <widget class="QCheckBox" name="checkBox">
+           <property name="styleSheet">
+            <string notr="true">font-size: 20px;
+color:  rgb(178, 184, 192);
+padding: 5px;
+min-width: 70px;</string>
+           </property>
+           <property name="text">
+            <string>Капитализация процентов</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="verticalLayoutWidget_3">
+        <property name="geometry">
+         <rect>
+          <x>470</x>
+          <y>20</y>
+          <width>31</width>
+          <height>351</height>
+         </rect>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_3">
+         <item>
+          <widget class="QLabel" name="label_19">
+           <property name="styleSheet">
+            <string notr="true">color: #FFFFFF;
+font-size: 18px;</string>
+           </property>
+           <property name="text">
+            <string>₽</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_20">
+           <property name="styleSheet">
+            <string notr="true">color: #FFFFFF;
+font-size: 18px;</string>
+           </property>
+           <property name="text">
+            <string>лет</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_28">
+           <property name="styleSheet">
+            <string notr="true">color: #FFFFFF;
+font-size: 18px;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_21">
+           <property name="styleSheet">
+            <string notr="true">color: #FFFFFF;
+font-size: 18px;</string>
+           </property>
+           <property name="text">
+            <string>%</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_25">
+           <property name="styleSheet">
+            <string notr="true">color: #FFFFFF;
+font-size: 18px;</string>
+           </property>
+           <property name="text">
+            <string>%</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_29">
+           <property name="styleSheet">
+            <string notr="true">color: #FFFFFF;
+font-size: 18px;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_31">
+           <property name="styleSheet">
+            <string notr="true">color: #FFFFFF;
+font-size: 18px;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_32">
+           <property name="styleSheet">
+            <string notr="true">color: #FFFFFF;
+font-size: 18px;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QLabel" name="label_30">
+        <property name="geometry">
+         <rect>
+          <x>510</x>
+          <y>280</y>
+          <width>29</width>
+          <height>36</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: #FFFFFF;
+font-size: 18px;</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+      </widget>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>593</width>
+     <height>24</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>QCustomPlot</class>
+   <extends>QWidget</extends>
+   <header>qcustomplot.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
