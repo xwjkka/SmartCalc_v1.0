@@ -2,4 +2,5 @@
   Implementation of SmartCalc v1.0
 
 Makefile:
+
     make
