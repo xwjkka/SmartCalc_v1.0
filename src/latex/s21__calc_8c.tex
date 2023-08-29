@@ -1,0 +1,233 @@
+\hypertarget{s21__calc_8c}{}\doxysection{s21\+\_\+calc.\+c File Reference}
+\label{s21__calc_8c}\index{s21\_calc.c@{s21\_calc.c}}
+{\ttfamily \#include \char`\"{}s21\+\_\+calc.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{s21__calc_8c_a5aa25464b502d21d6608d5533a2328f2}{s21\+\_\+to\+\_\+polish}} (char $\ast$str, char $\ast$output)
+\begin{DoxyCompactList}\small\item\em Переводит выражение в польскую нотацию \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{s21__calc_8c_a3a4b44bfca971380f9edd68180496003}{s21\+\_\+calc\+\_\+notation}} (char $\ast$str, double x)
+\begin{DoxyCompactList}\small\item\em Считает польскую нотацию \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{s21__calc_8c_aa99b5150c5f6a5da6bb17162ffc55002}{s21\+\_\+is\+\_\+number}} (char symbol)
+\begin{DoxyCompactList}\small\item\em Проверяет является ли символом числом \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{s21__calc_8c_ae2039a60511267fdb66ce24a54ed546c}{s21\+\_\+is\+\_\+operation}} (char symbol)
+\begin{DoxyCompactList}\small\item\em Проверяет является ли символом функцией или ее первой буквой \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{s21__calc_8c_a82ea54a3017a055b31859c8f7e263335}{s21\+\_\+is\+\_\+unary}} (int was\+\_\+number, int symbol)
+\begin{DoxyCompactList}\small\item\em Проверяет является ли операция унарной \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{s21__calc_8c_abdb53920c96a7cde8b278c2fb05b8192}{s21\+\_\+check\+\_\+priority}} (int operation\+\_\+index)
+\begin{DoxyCompactList}\small\item\em Определяет приоритет операций \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{s21__calc_8c_a70678b0769f42c6fe511c8d3d5a2b064}{s21\+\_\+check\+\_\+func}} (char $\ast$$\ast$str, int index, \mbox{\hyperlink{s21__calc_8h_a394ba537a7e98c565320cfb29fab9f81}{stack\+\_\+struct\+\_\+t}} $\ast$$\ast$operations)
+\begin{DoxyCompactList}\small\item\em Определяет какая функция введена \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{s21__calc_8c_a9addcd79012202595b7aa4235cb0eef7}{s21\+\_\+from\+\_\+type\+\_\+to\+\_\+char}} (int $\ast$type, char $\ast$op, int var)
+\begin{DoxyCompactList}\small\item\em Переводит из enum type в char. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{s21__calc_8c_a2ca78d65780bfc411ddc25d90605b01b}{s21\+\_\+add\+\_\+to\+\_\+output}} (char $\ast$$\ast$output, \mbox{\hyperlink{s21__calc_8h_a394ba537a7e98c565320cfb29fab9f81}{stack\+\_\+struct\+\_\+t}} $\ast$$\ast$operations, char current)
+\begin{DoxyCompactList}\small\item\em Добавляет весь стэк сверху к строке результата \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{s21__calc_8c_a4eac2da4f8d298d07c3d81d761c4fe80}{s21\+\_\+add\+\_\+to\+\_\+stack}} (char $\ast$str, \mbox{\hyperlink{s21__calc_8h_a394ba537a7e98c565320cfb29fab9f81}{stack\+\_\+struct\+\_\+t}} $\ast$$\ast$operations, int priority, int type, int $\ast$count\+\_\+open)
+\begin{DoxyCompactList}\small\item\em Добавляет в стэк функцию \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{s21__calc_8c_adbf9358ef2d65d25ec44d68bd1ab2450}{s21\+\_\+parse\+\_\+values}} (char $\ast$$\ast$str, \mbox{\hyperlink{s21__calc_8h_a394ba537a7e98c565320cfb29fab9f81}{stack\+\_\+struct\+\_\+t}} $\ast$$\ast$operations, int $\ast$was\+\_\+number, int $\ast$count\+\_\+open, int $\ast$priority, int $\ast$type)
+\begin{DoxyCompactList}\small\item\em Вычисляет из char необходимые параменты и записывает в разные перемнные. Например, унарный ли оператор и какой у него приоритет. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{s21__calc_8c_adae69eed860acb75c9ffc05a5485fd04}{s21\+\_\+push}} (\mbox{\hyperlink{s21__calc_8h_a394ba537a7e98c565320cfb29fab9f81}{stack\+\_\+struct\+\_\+t}} $\ast$$\ast$head, double value, int priority, enum \mbox{\hyperlink{s21__calc_8h_adee610a3c7375031538811d29f6a4124}{type\+\_\+t}} type)
+\begin{DoxyCompactList}\small\item\em Кладет новое значение в стэк \end{DoxyCompactList}\item 
+\mbox{\hyperlink{s21__calc_8h_a394ba537a7e98c565320cfb29fab9f81}{stack\+\_\+struct\+\_\+t}} $\ast$ \mbox{\hyperlink{s21__calc_8c_a6cfdf60be8d2bbb79d6836b087e48572}{s21\+\_\+pop}} (\mbox{\hyperlink{s21__calc_8h_a394ba537a7e98c565320cfb29fab9f81}{stack\+\_\+struct\+\_\+t}} $\ast$$\ast$head)
+\begin{DoxyCompactList}\small\item\em Берет значение сверху \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{s21__calc_8c_a342281b750db20246303ed975245a0de}{s21\+\_\+pop\+\_\+value}} (\mbox{\hyperlink{s21__calc_8h_a394ba537a7e98c565320cfb29fab9f81}{stack\+\_\+struct\+\_\+t}} $\ast$$\ast$head)
+\begin{DoxyCompactList}\small\item\em Берет значение сверху \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{s21__calc_8c_aa3deb351bc6bae70e34548ceb54298b7}{s21\+\_\+delete}} (\mbox{\hyperlink{s21__calc_8h_a394ba537a7e98c565320cfb29fab9f81}{stack\+\_\+struct\+\_\+t}} $\ast$$\ast$head)
+\begin{DoxyCompactList}\small\item\em Удаляет стэк \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{s21__calc_8c_a2ca78d65780bfc411ddc25d90605b01b}\label{s21__calc_8c_a2ca78d65780bfc411ddc25d90605b01b}} 
+\index{s21\_calc.c@{s21\_calc.c}!s21\_add\_to\_output@{s21\_add\_to\_output}}
+\index{s21\_add\_to\_output@{s21\_add\_to\_output}!s21\_calc.c@{s21\_calc.c}}
+\doxysubsubsection{\texorpdfstring{s21\_add\_to\_output()}{s21\_add\_to\_output()}}
+{\footnotesize\ttfamily int s21\+\_\+add\+\_\+to\+\_\+output (\begin{DoxyParamCaption}\item[{char $\ast$$\ast$}]{output,  }\item[{\mbox{\hyperlink{s21__calc_8h_a394ba537a7e98c565320cfb29fab9f81}{stack\+\_\+struct\+\_\+t}} $\ast$$\ast$}]{operations,  }\item[{char}]{current }\end{DoxyParamCaption})}
+
+
+
+Добавляет весь стэк сверху к строке результата 
+
+\begin{DoxyReturn}{Returns}
+0 -\/ ОК, 1 -\/ ошибка 
+\end{DoxyReturn}
+\mbox{\Hypertarget{s21__calc_8c_a4eac2da4f8d298d07c3d81d761c4fe80}\label{s21__calc_8c_a4eac2da4f8d298d07c3d81d761c4fe80}} 
+\index{s21\_calc.c@{s21\_calc.c}!s21\_add\_to\_stack@{s21\_add\_to\_stack}}
+\index{s21\_add\_to\_stack@{s21\_add\_to\_stack}!s21\_calc.c@{s21\_calc.c}}
+\doxysubsubsection{\texorpdfstring{s21\_add\_to\_stack()}{s21\_add\_to\_stack()}}
+{\footnotesize\ttfamily void s21\+\_\+add\+\_\+to\+\_\+stack (\begin{DoxyParamCaption}\item[{char $\ast$}]{str,  }\item[{\mbox{\hyperlink{s21__calc_8h_a394ba537a7e98c565320cfb29fab9f81}{stack\+\_\+struct\+\_\+t}} $\ast$$\ast$}]{operations,  }\item[{int}]{priority,  }\item[{int}]{type,  }\item[{int $\ast$}]{count\+\_\+open }\end{DoxyParamCaption})}
+
+
+
+Добавляет в стэк функцию 
+
+\mbox{\Hypertarget{s21__calc_8c_a3a4b44bfca971380f9edd68180496003}\label{s21__calc_8c_a3a4b44bfca971380f9edd68180496003}} 
+\index{s21\_calc.c@{s21\_calc.c}!s21\_calc\_notation@{s21\_calc\_notation}}
+\index{s21\_calc\_notation@{s21\_calc\_notation}!s21\_calc.c@{s21\_calc.c}}
+\doxysubsubsection{\texorpdfstring{s21\_calc\_notation()}{s21\_calc\_notation()}}
+{\footnotesize\ttfamily double s21\+\_\+calc\+\_\+notation (\begin{DoxyParamCaption}\item[{char $\ast$}]{str,  }\item[{double}]{x }\end{DoxyParamCaption})}
+
+
+
+Считает польскую нотацию 
+
+
+\begin{DoxyParams}{Parameters}
+{\em str} & Польская нотация \\
+\hline
+{\em x} & Если нужно подставить x, по дефолту 0 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Посчитанный ответ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{s21__calc_8c_a70678b0769f42c6fe511c8d3d5a2b064}\label{s21__calc_8c_a70678b0769f42c6fe511c8d3d5a2b064}} 
+\index{s21\_calc.c@{s21\_calc.c}!s21\_check\_func@{s21\_check\_func}}
+\index{s21\_check\_func@{s21\_check\_func}!s21\_calc.c@{s21\_calc.c}}
+\doxysubsubsection{\texorpdfstring{s21\_check\_func()}{s21\_check\_func()}}
+{\footnotesize\ttfamily char s21\+\_\+check\+\_\+func (\begin{DoxyParamCaption}\item[{char $\ast$$\ast$}]{str,  }\item[{int}]{index,  }\item[{\mbox{\hyperlink{s21__calc_8h_a394ba537a7e98c565320cfb29fab9f81}{stack\+\_\+struct\+\_\+t}} $\ast$$\ast$}]{operations }\end{DoxyParamCaption})}
+
+
+
+Определяет какая функция введена 
+
+\begin{DoxyReturn}{Returns}
+букву, которую я обозначила за опреденную функцию 
+\end{DoxyReturn}
+\mbox{\Hypertarget{s21__calc_8c_abdb53920c96a7cde8b278c2fb05b8192}\label{s21__calc_8c_abdb53920c96a7cde8b278c2fb05b8192}} 
+\index{s21\_calc.c@{s21\_calc.c}!s21\_check\_priority@{s21\_check\_priority}}
+\index{s21\_check\_priority@{s21\_check\_priority}!s21\_calc.c@{s21\_calc.c}}
+\doxysubsubsection{\texorpdfstring{s21\_check\_priority()}{s21\_check\_priority()}}
+{\footnotesize\ttfamily int s21\+\_\+check\+\_\+priority (\begin{DoxyParamCaption}\item[{int}]{operation\+\_\+index }\end{DoxyParamCaption})}
+
+
+
+Определяет приоритет операций 
+
+\mbox{\Hypertarget{s21__calc_8c_aa3deb351bc6bae70e34548ceb54298b7}\label{s21__calc_8c_aa3deb351bc6bae70e34548ceb54298b7}} 
+\index{s21\_calc.c@{s21\_calc.c}!s21\_delete@{s21\_delete}}
+\index{s21\_delete@{s21\_delete}!s21\_calc.c@{s21\_calc.c}}
+\doxysubsubsection{\texorpdfstring{s21\_delete()}{s21\_delete()}}
+{\footnotesize\ttfamily void s21\+\_\+delete (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{s21__calc_8h_a394ba537a7e98c565320cfb29fab9f81}{stack\+\_\+struct\+\_\+t}} $\ast$$\ast$}]{head }\end{DoxyParamCaption})}
+
+
+
+Удаляет стэк 
+
+\mbox{\Hypertarget{s21__calc_8c_a9addcd79012202595b7aa4235cb0eef7}\label{s21__calc_8c_a9addcd79012202595b7aa4235cb0eef7}} 
+\index{s21\_calc.c@{s21\_calc.c}!s21\_from\_type\_to\_char@{s21\_from\_type\_to\_char}}
+\index{s21\_from\_type\_to\_char@{s21\_from\_type\_to\_char}!s21\_calc.c@{s21\_calc.c}}
+\doxysubsubsection{\texorpdfstring{s21\_from\_type\_to\_char()}{s21\_from\_type\_to\_char()}}
+{\footnotesize\ttfamily void s21\+\_\+from\+\_\+type\+\_\+to\+\_\+char (\begin{DoxyParamCaption}\item[{int $\ast$}]{type,  }\item[{char $\ast$}]{op,  }\item[{int}]{var }\end{DoxyParamCaption})}
+
+
+
+Переводит из enum type в char. 
+
+\mbox{\Hypertarget{s21__calc_8c_aa99b5150c5f6a5da6bb17162ffc55002}\label{s21__calc_8c_aa99b5150c5f6a5da6bb17162ffc55002}} 
+\index{s21\_calc.c@{s21\_calc.c}!s21\_is\_number@{s21\_is\_number}}
+\index{s21\_is\_number@{s21\_is\_number}!s21\_calc.c@{s21\_calc.c}}
+\doxysubsubsection{\texorpdfstring{s21\_is\_number()}{s21\_is\_number()}}
+{\footnotesize\ttfamily int s21\+\_\+is\+\_\+number (\begin{DoxyParamCaption}\item[{char}]{symbol }\end{DoxyParamCaption})}
+
+
+
+Проверяет является ли символом числом 
+
+\begin{DoxyReturn}{Returns}
+0 -\/ нет, 1 -\/ да 
+\end{DoxyReturn}
+\mbox{\Hypertarget{s21__calc_8c_ae2039a60511267fdb66ce24a54ed546c}\label{s21__calc_8c_ae2039a60511267fdb66ce24a54ed546c}} 
+\index{s21\_calc.c@{s21\_calc.c}!s21\_is\_operation@{s21\_is\_operation}}
+\index{s21\_is\_operation@{s21\_is\_operation}!s21\_calc.c@{s21\_calc.c}}
+\doxysubsubsection{\texorpdfstring{s21\_is\_operation()}{s21\_is\_operation()}}
+{\footnotesize\ttfamily int s21\+\_\+is\+\_\+operation (\begin{DoxyParamCaption}\item[{char}]{symbol }\end{DoxyParamCaption})}
+
+
+
+Проверяет является ли символом функцией или ее первой буквой 
+
+\begin{DoxyReturn}{Returns}
+Порядковый номер в некоторой строке 
+\end{DoxyReturn}
+\mbox{\Hypertarget{s21__calc_8c_a82ea54a3017a055b31859c8f7e263335}\label{s21__calc_8c_a82ea54a3017a055b31859c8f7e263335}} 
+\index{s21\_calc.c@{s21\_calc.c}!s21\_is\_unary@{s21\_is\_unary}}
+\index{s21\_is\_unary@{s21\_is\_unary}!s21\_calc.c@{s21\_calc.c}}
+\doxysubsubsection{\texorpdfstring{s21\_is\_unary()}{s21\_is\_unary()}}
+{\footnotesize\ttfamily int s21\+\_\+is\+\_\+unary (\begin{DoxyParamCaption}\item[{int}]{was\+\_\+number,  }\item[{int}]{symbol }\end{DoxyParamCaption})}
+
+
+
+Проверяет является ли операция унарной 
+
+\begin{DoxyReturn}{Returns}
+0 -\/ нет, 1 -\/ да 
+\end{DoxyReturn}
+\mbox{\Hypertarget{s21__calc_8c_adbf9358ef2d65d25ec44d68bd1ab2450}\label{s21__calc_8c_adbf9358ef2d65d25ec44d68bd1ab2450}} 
+\index{s21\_calc.c@{s21\_calc.c}!s21\_parse\_values@{s21\_parse\_values}}
+\index{s21\_parse\_values@{s21\_parse\_values}!s21\_calc.c@{s21\_calc.c}}
+\doxysubsubsection{\texorpdfstring{s21\_parse\_values()}{s21\_parse\_values()}}
+{\footnotesize\ttfamily int s21\+\_\+parse\+\_\+values (\begin{DoxyParamCaption}\item[{char $\ast$$\ast$}]{str,  }\item[{\mbox{\hyperlink{s21__calc_8h_a394ba537a7e98c565320cfb29fab9f81}{stack\+\_\+struct\+\_\+t}} $\ast$$\ast$}]{operations,  }\item[{int $\ast$}]{was\+\_\+number,  }\item[{int $\ast$}]{count\+\_\+open,  }\item[{int $\ast$}]{priority,  }\item[{int $\ast$}]{type }\end{DoxyParamCaption})}
+
+
+
+Вычисляет из char необходимые параменты и записывает в разные перемнные. Например, унарный ли оператор и какой у него приоритет. 
+
+\begin{DoxyReturn}{Returns}
+0 -\/ ОК, 1 -\/ ошибка 
+\end{DoxyReturn}
+\mbox{\Hypertarget{s21__calc_8c_a6cfdf60be8d2bbb79d6836b087e48572}\label{s21__calc_8c_a6cfdf60be8d2bbb79d6836b087e48572}} 
+\index{s21\_calc.c@{s21\_calc.c}!s21\_pop@{s21\_pop}}
+\index{s21\_pop@{s21\_pop}!s21\_calc.c@{s21\_calc.c}}
+\doxysubsubsection{\texorpdfstring{s21\_pop()}{s21\_pop()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{s21__calc_8h_a394ba537a7e98c565320cfb29fab9f81}{stack\+\_\+struct\+\_\+t}} $\ast$ s21\+\_\+pop (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{s21__calc_8h_a394ba537a7e98c565320cfb29fab9f81}{stack\+\_\+struct\+\_\+t}} $\ast$$\ast$}]{head }\end{DoxyParamCaption})}
+
+
+
+Берет значение сверху 
+
+\begin{DoxyReturn}{Returns}
+Полносью верхнюю ноду 
+\end{DoxyReturn}
+\mbox{\Hypertarget{s21__calc_8c_a342281b750db20246303ed975245a0de}\label{s21__calc_8c_a342281b750db20246303ed975245a0de}} 
+\index{s21\_calc.c@{s21\_calc.c}!s21\_pop\_value@{s21\_pop\_value}}
+\index{s21\_pop\_value@{s21\_pop\_value}!s21\_calc.c@{s21\_calc.c}}
+\doxysubsubsection{\texorpdfstring{s21\_pop\_value()}{s21\_pop\_value()}}
+{\footnotesize\ttfamily double s21\+\_\+pop\+\_\+value (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{s21__calc_8h_a394ba537a7e98c565320cfb29fab9f81}{stack\+\_\+struct\+\_\+t}} $\ast$$\ast$}]{head }\end{DoxyParamCaption})}
+
+
+
+Берет значение сверху 
+
+\begin{DoxyReturn}{Returns}
+Значение value верхней ноды 
+\end{DoxyReturn}
+\mbox{\Hypertarget{s21__calc_8c_adae69eed860acb75c9ffc05a5485fd04}\label{s21__calc_8c_adae69eed860acb75c9ffc05a5485fd04}} 
+\index{s21\_calc.c@{s21\_calc.c}!s21\_push@{s21\_push}}
+\index{s21\_push@{s21\_push}!s21\_calc.c@{s21\_calc.c}}
+\doxysubsubsection{\texorpdfstring{s21\_push()}{s21\_push()}}
+{\footnotesize\ttfamily void s21\+\_\+push (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{s21__calc_8h_a394ba537a7e98c565320cfb29fab9f81}{stack\+\_\+struct\+\_\+t}} $\ast$$\ast$}]{head,  }\item[{double}]{value,  }\item[{int}]{priority,  }\item[{enum \mbox{\hyperlink{s21__calc_8h_adee610a3c7375031538811d29f6a4124}{type\+\_\+t}}}]{type }\end{DoxyParamCaption})}
+
+
+
+Кладет новое значение в стэк 
+
+\mbox{\Hypertarget{s21__calc_8c_a5aa25464b502d21d6608d5533a2328f2}\label{s21__calc_8c_a5aa25464b502d21d6608d5533a2328f2}} 
+\index{s21\_calc.c@{s21\_calc.c}!s21\_to\_polish@{s21\_to\_polish}}
+\index{s21\_to\_polish@{s21\_to\_polish}!s21\_calc.c@{s21\_calc.c}}
+\doxysubsubsection{\texorpdfstring{s21\_to\_polish()}{s21\_to\_polish()}}
+{\footnotesize\ttfamily int s21\+\_\+to\+\_\+polish (\begin{DoxyParamCaption}\item[{char $\ast$}]{str,  }\item[{char $\ast$}]{output }\end{DoxyParamCaption})}
+
+
+
+Переводит выражение в польскую нотацию 
+
+
+\begin{DoxyParams}{Parameters}
+{\em str} & Входная строка с выражением \\
+\hline
+{\em output} & Выходная строка \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 -\/ ОК, 1 -\/ ошибка 
+\end{DoxyReturn}

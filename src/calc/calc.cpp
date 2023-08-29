@@ -433,3 +433,34 @@ void calc::on_radioButton_toggled(bool checked)
     dif = 1;
 }
 
+
+void calc::on_pushButton_div_2_clicked()
+{
+    no_error();
+    buff[index++] = ' ';
+    buff[index++] = 'm';
+    buff[index++] = 'o';
+    buff[index++] = 'd';
+    buff[index++] = ' ';
+    ui->lineEdit->setText(buff);
+    countLen();
+}
+
+
+void calc::on_pushButton_clear_2_clicked()
+{
+    no_error();
+    if (index > 0) {
+        index -= 1;
+    //    temp = buff;
+        memset(temp, 0, 256);
+        for (int i = 0; i < index; i++) {
+            temp[i] = buff[i];
+        }
+        memset(buff, 0, 256);
+        strcpy(buff, temp);
+        ui->lineEdit->setText(buff);
+        countLen();
+    }
+}
+

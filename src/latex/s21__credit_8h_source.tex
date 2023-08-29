@@ -1,0 +1,24 @@
+\hypertarget{s21__credit_8h_source}{}\doxysection{s21\+\_\+credit.\+h}
+\mbox{\hyperlink{s21__credit_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ SRC\_S21\_CREDIT\_H\_}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ SRC\_S21\_CREDIT\_H\_}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <math.h>}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#define\ Annuity\ 1}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#define\ Differentiated\ 2}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structcredit}{credit}}\ \{}
+\DoxyCodeLine{00013\ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{structcredit_a0c7072e58d3f0930cb80830aee2c68ad}{payment}}[10000];}
+\DoxyCodeLine{00014\ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{structcredit_a42de5da1f8e7ae97994cfba9b1bb1ce4}{charges}};}
+\DoxyCodeLine{00015\ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{structcredit_a1bda25140dc50c53d0a42bcd015aa5b6}{total}};}
+\DoxyCodeLine{00016\ \}\ \mbox{\hyperlink{s21__credit_8h_ade797431a10b7d2d55fbc02933e08c9b}{credit\_t}};}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00026\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{s21__credit_8h_ae0df631316f3d4c4031c0d805fe34dba}{s21\_credit\_annuity}}(\textcolor{keywordtype}{double}\ amount,\ \textcolor{keywordtype}{int}\ years,\ \textcolor{keywordtype}{double}\ rate,\ \mbox{\hyperlink{structcredit}{credit\_t}}\ *\mbox{\hyperlink{structcredit}{credit}});}
+\DoxyCodeLine{00035\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{s21__credit_8h_a1d7077598e71a191d2a447252f2237a1}{s21\_credit\_differentiated}}(\textcolor{keywordtype}{double}\ amount,\ \textcolor{keywordtype}{int}\ years,\ \textcolor{keywordtype}{double}\ rate,}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structcredit}{credit\_t}}\ *\mbox{\hyperlink{structcredit}{credit}});}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ SRC\_S21\_CREDIT\_H\_}}
+
+\end{DoxyCode}

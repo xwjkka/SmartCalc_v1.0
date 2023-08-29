@@ -12,10 +12,32 @@ ifeq ($(shell uname -s),Linux)
 	TEST_FLAGS += -lrt -lsubunit
 endif
 
-all: s21_calc
+all: install open
 
 # sense:
 # 	rm -rf */
+
+install:
+	rm -rf build
+	make clean
+	mkdir build
+	cd ./build; cmake ../calc/CMakeLists.txt; cmake --build .
+
+open:
+	build/calc.app/Contents/MacOS/./calc 
+
+uninstall:
+	rm -rf build*
+
+dvi:
+	doxygen ./Doxygen
+	open html/index.html
+
+open_doc:
+	open html/index.html
+
+dist:
+	cd ..; tar -cvf archive.tar src
 
 $(EXECUTABLE): $(OBJECTS)
 	$(CC) $^ -o $@
@@ -35,7 +57,7 @@ style:
 beautify:
 	clang-format -i *.c *.h tests/*.c tests/*.h
 
-clean:
+clean: uninstall
 	rm -rf $(OBJECTS) $(EXECUTABLE) $(TESTS_OBJECTS) *.o s21_calc.a *.gcov *.gcno *.gcda *.info test jeannakr *.dSYM
 
 test: $(TESTS_OBJECTS) s21_calc.a

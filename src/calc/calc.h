@@ -57,11 +57,16 @@ private slots:
     void on_radioButton_3_toggled(bool checked);
     void on_radioButton_toggled(bool checked);
 
+    void on_pushButton_div_2_clicked();
+
+    void on_pushButton_clear_2_clicked();
+
 private:
     Ui::calc *ui;
 
 private:
     char buff[256];
+    char temp[256];
     int index = 0;
 
     char output[256];

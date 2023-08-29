@@ -1,0 +1,62 @@
+\hypertarget{s21__credit_8c}{}\doxysection{s21\+\_\+credit.\+c File Reference}
+\label{s21__credit_8c}\index{s21\_credit.c@{s21\_credit.c}}
+{\ttfamily \#include \char`\"{}s21\+\_\+credit.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}s21\+\_\+calc.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{s21__credit_8c_ae0df631316f3d4c4031c0d805fe34dba}{s21\+\_\+credit\+\_\+annuity}} (double amount, int years, double rate, \mbox{\hyperlink{s21__credit_8h_ade797431a10b7d2d55fbc02933e08c9b}{credit\+\_\+t}} $\ast$\mbox{\hyperlink{structcredit}{credit}})
+\begin{DoxyCompactList}\small\item\em Считает выплаты по кредиту с аннуитентными платежами \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{s21__credit_8c_a1d7077598e71a191d2a447252f2237a1}{s21\+\_\+credit\+\_\+differentiated}} (double amount, int years, double rate, \mbox{\hyperlink{s21__credit_8h_ade797431a10b7d2d55fbc02933e08c9b}{credit\+\_\+t}} $\ast$\mbox{\hyperlink{structcredit}{credit}})
+\begin{DoxyCompactList}\small\item\em Считает выплаты по кредиту с дифференцированными платежами \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{s21__credit_8c_ae0df631316f3d4c4031c0d805fe34dba}\label{s21__credit_8c_ae0df631316f3d4c4031c0d805fe34dba}} 
+\index{s21\_credit.c@{s21\_credit.c}!s21\_credit\_annuity@{s21\_credit\_annuity}}
+\index{s21\_credit\_annuity@{s21\_credit\_annuity}!s21\_credit.c@{s21\_credit.c}}
+\doxysubsubsection{\texorpdfstring{s21\_credit\_annuity()}{s21\_credit\_annuity()}}
+{\footnotesize\ttfamily int s21\+\_\+credit\+\_\+annuity (\begin{DoxyParamCaption}\item[{double}]{amount,  }\item[{int}]{years,  }\item[{double}]{rate,  }\item[{\mbox{\hyperlink{s21__credit_8h_ade797431a10b7d2d55fbc02933e08c9b}{credit\+\_\+t}} $\ast$}]{credit }\end{DoxyParamCaption})}
+
+
+
+Считает выплаты по кредиту с аннуитентными платежами 
+
+
+\begin{DoxyParams}{Parameters}
+{\em amount} & Сумма кредита \\
+\hline
+{\em years} & Количество лет \\
+\hline
+{\em rate} & Процентная ставка \\
+\hline
+{\em credit} & Структура куда записать ответ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 -\/ ОК; 1 -\/ ошибка 
+\end{DoxyReturn}
+\mbox{\Hypertarget{s21__credit_8c_a1d7077598e71a191d2a447252f2237a1}\label{s21__credit_8c_a1d7077598e71a191d2a447252f2237a1}} 
+\index{s21\_credit.c@{s21\_credit.c}!s21\_credit\_differentiated@{s21\_credit\_differentiated}}
+\index{s21\_credit\_differentiated@{s21\_credit\_differentiated}!s21\_credit.c@{s21\_credit.c}}
+\doxysubsubsection{\texorpdfstring{s21\_credit\_differentiated()}{s21\_credit\_differentiated()}}
+{\footnotesize\ttfamily int s21\+\_\+credit\+\_\+differentiated (\begin{DoxyParamCaption}\item[{double}]{amount,  }\item[{int}]{years,  }\item[{double}]{rate,  }\item[{\mbox{\hyperlink{s21__credit_8h_ade797431a10b7d2d55fbc02933e08c9b}{credit\+\_\+t}} $\ast$}]{credit }\end{DoxyParamCaption})}
+
+
+
+Считает выплаты по кредиту с дифференцированными платежами 
+
+
+\begin{DoxyParams}{Parameters}
+{\em amount} & Сумма кредита \\
+\hline
+{\em years} & Количество лет \\
+\hline
+{\em rate} & Процентная ставка \\
+\hline
+{\em credit} & Структура куда записать ответ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 -\/ ОК; 1 -\/ ошибка 
+\end{DoxyReturn}

@@ -1,0 +1,66 @@
+\hypertarget{s21__calc_8h_source}{}\doxysection{s21\+\_\+calc.\+h}
+\mbox{\hyperlink{s21__calc_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ SRC\_S21\_CALC\_H\_}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ SRC\_S21\_CALC\_H\_}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <math.h>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <stdlib.h>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <string.h>}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{s21__calc_8h_adee610a3c7375031538811d29f6a4124}{type\_t}}\ \{\ \textcolor{comment}{//\ -\/}}
+\DoxyCodeLine{00013\ \ \ \mbox{\hyperlink{s21__calc_8h_adee610a3c7375031538811d29f6a4124afa620f80ceb585b771a878cc135c4035}{Number}},}
+\DoxyCodeLine{00014\ \ \ \mbox{\hyperlink{s21__calc_8h_adee610a3c7375031538811d29f6a4124a58833a3110c570fb05130d40c365d1e4}{X}},}
+\DoxyCodeLine{00015\ \ \ \mbox{\hyperlink{s21__calc_8h_adee610a3c7375031538811d29f6a4124ab83498ad0d7694203035a6e12d65cc8f}{Plus}},}
+\DoxyCodeLine{00016\ \ \ \mbox{\hyperlink{s21__calc_8h_adee610a3c7375031538811d29f6a4124a54131b054736cae0dd9f4438ac44ecb0}{Minus}},}
+\DoxyCodeLine{00017\ \ \ \mbox{\hyperlink{s21__calc_8h_adee610a3c7375031538811d29f6a4124a1ebd9cf34f3ca1a320e23ff371fa7bce}{Open\_bracket}},}
+\DoxyCodeLine{00018\ \ \ \mbox{\hyperlink{s21__calc_8h_adee610a3c7375031538811d29f6a4124ac11cd5096bce522e5c65a328bdfa8950}{Mult}},}
+\DoxyCodeLine{00019\ \ \ \mbox{\hyperlink{s21__calc_8h_adee610a3c7375031538811d29f6a4124ae6fac012a9b23f2f87d8094e349e4418}{Div}},}
+\DoxyCodeLine{00020\ \ \ \mbox{\hyperlink{s21__calc_8h_adee610a3c7375031538811d29f6a4124a5eb4e055dea18073ed61eb5addccb5ff}{Exp}},}
+\DoxyCodeLine{00021\ \ \ \mbox{\hyperlink{s21__calc_8h_adee610a3c7375031538811d29f6a4124a6265a10e42e4cfbf0c109d1685551e38}{Mod}},}
+\DoxyCodeLine{00022\ \ \ \mbox{\hyperlink{s21__calc_8h_adee610a3c7375031538811d29f6a4124ac2dce1668fa917e2c23ef641a406044d}{Cos}},}
+\DoxyCodeLine{00023\ \ \ \mbox{\hyperlink{s21__calc_8h_adee610a3c7375031538811d29f6a4124a945ca84f0cf6d5f725264a980b939a9c}{Sin}},}
+\DoxyCodeLine{00024\ \ \ \mbox{\hyperlink{s21__calc_8h_adee610a3c7375031538811d29f6a4124ab492a96cd2b9bb37c81b8451a42889d9}{Tan}},}
+\DoxyCodeLine{00025\ \ \ \mbox{\hyperlink{s21__calc_8h_adee610a3c7375031538811d29f6a4124a667c5af5ee996624c028249cceddc7b3}{Acos}},}
+\DoxyCodeLine{00026\ \ \ \mbox{\hyperlink{s21__calc_8h_adee610a3c7375031538811d29f6a4124ac10e1735d1c6349dfb42fa5dbd18c83a}{Asin}},}
+\DoxyCodeLine{00027\ \ \ \mbox{\hyperlink{s21__calc_8h_adee610a3c7375031538811d29f6a4124a39e78ace5fbadbd95ed64c9cd0189176}{Atan}},}
+\DoxyCodeLine{00028\ \ \ \mbox{\hyperlink{s21__calc_8h_adee610a3c7375031538811d29f6a4124a98095238a325acc3b59341ba5367172d}{Sqrt}},}
+\DoxyCodeLine{00029\ \ \ \mbox{\hyperlink{s21__calc_8h_adee610a3c7375031538811d29f6a4124a05e01fc80da2f90f6685604e5354de95}{Ln}},}
+\DoxyCodeLine{00030\ \ \ \mbox{\hyperlink{s21__calc_8h_adee610a3c7375031538811d29f6a4124a089fe3c8ed633fc44cb2e73b17af84ec}{Log}},}
+\DoxyCodeLine{00031\ \ \ \mbox{\hyperlink{s21__calc_8h_adee610a3c7375031538811d29f6a4124a0b23b7c44832f1d6ee7e9cb90f5c6c51}{Close\_bracket}},}
+\DoxyCodeLine{00032\ \ \ \mbox{\hyperlink{s21__calc_8h_adee610a3c7375031538811d29f6a4124a111c7f8878f6d538becf7c8f71e5e5af}{Uplus}},}
+\DoxyCodeLine{00033\ \ \ \mbox{\hyperlink{s21__calc_8h_adee610a3c7375031538811d29f6a4124a3eef243dcf93cb6dc5f5d9ca4f1b3a28}{Uminus}},}
+\DoxyCodeLine{00034\ \};}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00043\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structstack__struct}{stack\_struct}}\ \{}
+\DoxyCodeLine{00044\ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{structstack__struct_a02009d03ef1a9378d4fe8a47dcb62640}{value}};}
+\DoxyCodeLine{00045\ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structstack__struct_ab3af84134bbda746fa3f6351f56aa7d6}{priority}};}
+\DoxyCodeLine{00046\ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structstack__struct}{stack\_struct}}\ *\mbox{\hyperlink{structstack__struct_adf0d693f307f470a51a98275aa390c3d}{next}};}
+\DoxyCodeLine{00047\ \ \ \textcolor{keyword}{enum}\ \mbox{\hyperlink{s21__calc_8h_adee610a3c7375031538811d29f6a4124}{type\_t}}\ \mbox{\hyperlink{structstack__struct_aae3a797f14db5dd2746c37d61834d382}{type}};}
+\DoxyCodeLine{00048\ \}\ \mbox{\hyperlink{s21__calc_8h_a394ba537a7e98c565320cfb29fab9f81}{stack\_struct\_t}};}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00053\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{s21__calc_8h_adae69eed860acb75c9ffc05a5485fd04}{s21\_push}}(\mbox{\hyperlink{structstack__struct}{stack\_struct\_t}}\ **head,\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{structstack__struct_a02009d03ef1a9378d4fe8a47dcb62640}{value}},\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structstack__struct_ab3af84134bbda746fa3f6351f56aa7d6}{priority}},}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{enum}\ \mbox{\hyperlink{s21__calc_8h_adee610a3c7375031538811d29f6a4124}{type\_t}}\ \mbox{\hyperlink{structstack__struct_aae3a797f14db5dd2746c37d61834d382}{type}});}
+\DoxyCodeLine{00059\ \mbox{\hyperlink{structstack__struct}{stack\_struct\_t}}\ *\mbox{\hyperlink{s21__calc_8h_a6cfdf60be8d2bbb79d6836b087e48572}{s21\_pop}}(\mbox{\hyperlink{structstack__struct}{stack\_struct\_t}}\ **head);}
+\DoxyCodeLine{00063\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{s21__calc_8h_a5753ac621258e3d755efcc38bd9fefeb}{s21\_printStack}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{structstack__struct}{stack\_struct\_t}}\ *head);}
+\DoxyCodeLine{00067\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{s21__calc_8h_aa3deb351bc6bae70e34548ceb54298b7}{s21\_delete}}(\mbox{\hyperlink{structstack__struct}{stack\_struct\_t}}\ **head);}
+\DoxyCodeLine{00072\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{s21__calc_8h_a342281b750db20246303ed975245a0de}{s21\_pop\_value}}(\mbox{\hyperlink{structstack__struct}{stack\_struct\_t}}\ **head);}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00080\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{s21__calc_8h_a5aa25464b502d21d6608d5533a2328f2}{s21\_to\_polish}}(\textcolor{keywordtype}{char}\ *str,\ \textcolor{keywordtype}{char}\ *output);}
+\DoxyCodeLine{00085\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{s21__calc_8h_aa99b5150c5f6a5da6bb17162ffc55002}{s21\_is\_number}}(\textcolor{keywordtype}{char}\ symbol);}
+\DoxyCodeLine{00090\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{s21__calc_8h_ae2039a60511267fdb66ce24a54ed546c}{s21\_is\_operation}}(\textcolor{keywordtype}{char}\ symbol);}
+\DoxyCodeLine{00095\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{s21__calc_8h_a82ea54a3017a055b31859c8f7e263335}{s21\_is\_unary}}(\textcolor{keywordtype}{int}\ was\_number,\ \textcolor{keywordtype}{int}\ symbol);}
+\DoxyCodeLine{00099\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{s21__calc_8h_abdb53920c96a7cde8b278c2fb05b8192}{s21\_check\_priority}}(\textcolor{keywordtype}{int}\ operation\_index);}
+\DoxyCodeLine{00104\ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{s21__calc_8h_a70678b0769f42c6fe511c8d3d5a2b064}{s21\_check\_func}}(\textcolor{keywordtype}{char}\ **str,\ \textcolor{keywordtype}{int}\ index,\ \mbox{\hyperlink{structstack__struct}{stack\_struct\_t}}\ **operations);}
+\DoxyCodeLine{00108\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{s21__calc_8h_a9addcd79012202595b7aa4235cb0eef7}{s21\_from\_type\_to\_char}}(\textcolor{keywordtype}{int}\ *\mbox{\hyperlink{structstack__struct_aae3a797f14db5dd2746c37d61834d382}{type}},\ \textcolor{keywordtype}{char}\ *op,\ \textcolor{keywordtype}{int}\ var);}
+\DoxyCodeLine{00113\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{s21__calc_8h_a2ca78d65780bfc411ddc25d90605b01b}{s21\_add\_to\_output}}(\textcolor{keywordtype}{char}\ **output,\ \mbox{\hyperlink{structstack__struct}{stack\_struct\_t}}\ **operations,\ \textcolor{keywordtype}{char}\ current);}
+\DoxyCodeLine{00117\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{s21__calc_8h_a4eac2da4f8d298d07c3d81d761c4fe80}{s21\_add\_to\_stack}}(\textcolor{keywordtype}{char}\ *str,\ \mbox{\hyperlink{structstack__struct}{stack\_struct\_t}}\ **operations,\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structstack__struct_ab3af84134bbda746fa3f6351f56aa7d6}{priority}},}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structstack__struct_aae3a797f14db5dd2746c37d61834d382}{type}},\ \textcolor{keywordtype}{int}\ *count\_open);}
+\DoxyCodeLine{00124\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{s21__calc_8h_adbf9358ef2d65d25ec44d68bd1ab2450}{s21\_parse\_values}}(\textcolor{keywordtype}{char}\ **str,\ \mbox{\hyperlink{structstack__struct}{stack\_struct\_t}}\ **operations,\ \textcolor{keywordtype}{int}\ *was\_number,}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ *count\_open,\ \textcolor{keywordtype}{int}\ *\mbox{\hyperlink{structstack__struct_ab3af84134bbda746fa3f6351f56aa7d6}{priority}},\ \textcolor{keywordtype}{int}\ *\mbox{\hyperlink{structstack__struct_aae3a797f14db5dd2746c37d61834d382}{type}});}
+\DoxyCodeLine{00132\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{s21__calc_8h_a3a4b44bfca971380f9edd68180496003}{s21\_calc\_notation}}(\textcolor{keywordtype}{char}\ *str,\ \textcolor{keywordtype}{double}\ x);}
+\DoxyCodeLine{00133\ }
+\DoxyCodeLine{00134\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ SRC\_S21\_CALC\_H\_}}
+
+\end{DoxyCode}

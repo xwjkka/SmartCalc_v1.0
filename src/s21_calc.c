@@ -1,28 +1,5 @@
 #include "s21_calc.h"
 
-// int main() {
-//   // char str[10] = "3+8.4*2";
-//   // char str[20] = "2 / (3 + 2) * 5";
-//   // char str[255] = "3 + sin(sin(x))";
-//   // char str[255] = "cos(30) / (5 ^ 2 + 33 mod 10) * atan(6) "; // есть leak
-//   // // char *output = calloc(2 * strlen(str), sizeof(char));
-//   // char output[255] = {0};
-//   // int res = s21_to_polish(str, output);
-//   // printf("%d\n", res);
-//   // printf("%s\n", output);
-// //   printf("res - %lf", s21_calc_notation(output, 5));
-//   char ans[255] = "2 ^ 2 ^ 3\0";
-//   // char input[255] = "2 2 3 ^ ^\0";
-//   char *res = malloc(sizeof(char) * 255);
-//   s21_to_polish(ans, res);
-//   double x = 0;
-//   printf("%s\n", res);
-//   x = s21_calc_notation(res, 0);
-//   printf("%s %lf", res, x);
-//   free(res);
-//   return 0;
-// }
-
 // ------------------- parse str --------------------------
 
 int s21_to_polish(char *str, char *output) {
@@ -107,7 +84,7 @@ double s21_calc_notation(char *str, double x) {
       } else if (*lexeme == '/') {
         s21_push(&numbers, second / first, 0, Number);
       } else if (*lexeme == '^') {
-        s21_push(&numbers, pow(first, second), 0, Number);
+        s21_push(&numbers, pow(second, first), 0, Number);
       } else if (*lexeme == 'm') {
         s21_push(&numbers, fmod(second, first), 0, Number);
       } else if (*lexeme == 'o') {
@@ -314,13 +291,13 @@ double s21_pop_value(stack_struct_t **head) {
   return res;
 }
 
-void s21_printStack(const stack_struct_t *head) {
-  while (head) {
-    printf("%lf %d %d\n", head->value, head->priority, head->type);
-    head = head->next;
-  }
-  printf("\n");
-}
+// void s21_printStack(const stack_struct_t *head) {
+//   while (head) {
+//     printf("%lf %d %d\n", head->value, head->priority, head->type);
+//     head = head->next;
+//   }
+//   printf("\n");
+// }
 
 void s21_delete(stack_struct_t **head) {
   stack_struct_t *tmp = {0};

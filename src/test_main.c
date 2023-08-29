@@ -21,10 +21,7 @@ void run_test_case(Suite *testcase) {
 }
 
 void run_all_tests() {
-  Suite *list_cases[] = {
-      suite_s21_to_polish(),
-      suite_s21_credit()
-  };
+  Suite *list_cases[] = {suite_s21_to_polish(), suite_s21_credit()};
   for (int i = 0; i < (int)(sizeof(list_cases) / sizeof(Suite *)); i++)
     run_test_case(list_cases[i]);
 }
